@@ -11,8 +11,9 @@ function sort(arr) {
             }
             console.log(arr[j], arr[j + 1])
         }
-        if (noswap)
+        if (noswap) {
             break;
+        }
     }
     return arr
 }
