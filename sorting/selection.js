@@ -1,16 +1,16 @@
 function sort(arr) {
     for (let i = 0; i < arr.length; i++) {
-        let min = i;
+        let minIndex = i;
         for (let j = i; j < arr.length; j++) {
-            if (arr[j] < arr[min]) {
-                min = j
+            if (arr[j] < arr[minIndex]) {
+                minIndex= j
             }
         }
-        if (!(i === min)) {
+        if (i !== minIndex) {
             let temp;
             temp = arr[i]
-            arr[i] = arr[min]
-            arr[min] = temp
+            arr[i] = arr[minIndex]
+            arr[minIndex] = temp
         }
     }
     return arr;
