@@ -1,4 +1,4 @@
-function sorting(arr) {
+function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++) {
         let currentVal = arr[i]
         let j
@@ -11,4 +11,4 @@ function sorting(arr) {
 }
 
 
-console.log(sorting([2,8,3,1,5,9,3,10]))
+console.log(insertionSort([2,8,3,1,5,9,3,10]))
