@@ -24,32 +24,31 @@ class singlylinkedlist {
         this.length++
         return this
     }
-    pop()
-    {
+    pop() {
         let current = this.head
         let newTail = current;
-        if(!(this.head))
-        {
+        if (!(this.head)) {
             return undefined
         }
-        else{
-            while(current.next)
-            {
+        else {
+            while (current.next) {
                 newTail = current
                 current = current.next
             }
             this.tail = newTail
             this.tail.next = null
             this.length--
+            if (this.length === 0) {
+                this.head = null
+                this.tail = null
+            }
             console.log(`The poped item is ${current.val}`)
 
         }
     }
-    printlist()
-    {
+    printlist() {
         let current = this.head
-        while(current)
-        {
+        while (current) {
             console.log(current.val)
             current = current.next
         }
