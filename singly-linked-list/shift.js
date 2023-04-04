@@ -27,44 +27,40 @@ class singlylinkedlist {
     pop() {
         let current = this.head
         let newTail = current
-        if(!(this.head)) return undefined
-        else
-        {
-        while (current.next) {
-            newTail = current
-            current = current.next
+        if (!(this.head)) return undefined
+        else {
+            while (current.next) {
+                newTail = current
+                current = current.next
+            }
+            this.tail = newTail
+            this.tail.next = null
+            this.length--
+            if (this.length === 0) {
+                this.head = null
+                this.head = null
+            }
+            console.log(`The poped out item is ${current.val}`)
         }
-        this.tail = newTail
-        this.tail.next = null
-        this.length--
-        if(this.length === 0)
-        {
-            this.head = null
-            this.head = null
-        }
-        console.log(`The poped out item is ${current.val}`)
     }
-    }
-    shift()
-    {
-        if(!(this.head)) return undefined
-        else{
+    shift() {
+        if (!(this.head)) return undefined
+        else {
             let temp = this.head
             this.head = temp.next
-            this.length-- 
+            this.length--
             console.log(`The item removed from the beggining is ${temp.val}`)
 
         }
     }
     printList() {
-       let current = this.head
-            while(current)
-            {
-                console.log(current.val)
-                current=current.next
-            }
+        let current = this.head
+        while (current) {
+            console.log(current.val)
+            current = current.next
         }
     }
+}
 let list = new singlylinkedlist()
 list.push("My")
 list.push("Name")

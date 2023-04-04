@@ -13,7 +13,7 @@ class singlylinkedlist {
     }
     push(val) {
         let newNode = new node(val)
-        if(!(this.head)) {
+        if (!(this.head)) {
             this.head = newNode
             this.tail = this.head
         }
@@ -45,19 +45,21 @@ class singlylinkedlist {
 
     }
     shift() {
-        if(!(this.head)) return undefined
+        if (!(this.head)) {
+            return undefined
+        }
         let temp = this.head
         this.head = temp.next
         this.length--
         console.log(`The item removed from the front if ${temp.val}`)
     }
-    unshift(val){
+    unshift(val) {
         let newHead = new node(val)
-        if(!(this.head)){
+        if (!(this.head)) {
             this.head = newHead
             this.tail = this.head
         }
-        else{
+        else {
             newHead.next = this.head
             this.head = newHead
         }
