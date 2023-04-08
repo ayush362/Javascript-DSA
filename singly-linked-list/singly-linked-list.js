@@ -85,11 +85,12 @@ class singlyLinkedlist {
 }
 
 let list = new singlyLinkedlist();
-list.push("Hello")
-list.push("There")
-list.push("how")
-list.push("Are")
-list.push("You")
+
+"Hello There How Are You"
+    .split(" ")
+    .forEach(word => list.push(word));;
+
+
 list.unshift("Hello")
 list.pop()
 list.shift()
