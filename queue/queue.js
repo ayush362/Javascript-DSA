@@ -32,6 +32,7 @@ class queue {
         else {
             if (this.first === this.last) {
                 this.last = null
+                this.first = null
             }
             else {
                 this.first = this.first.next
